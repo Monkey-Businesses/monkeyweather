@@ -1,0 +1,24 @@
+<html>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+<head>
+    <a href="/index.html" style="font-family: 'Lexend'; font-weight: 500; font-size: xx-large; color: black; text-decoration: none;">Monkey Weather</a>
+</head>
+<body>
+    <script src=./script.js></script>
+    <div style="font-family: 'Lexend'; font-weight: 500; font-size: large; color: black; text-decoration: none; text-align: center; margin-top: 20px;">
+        <p>monkey weather! a simple weather app/website to view weather details (WIP)</p>
+    </div>
+    <div style="font-family: 'Lexend'; font-weight: 500; font-size: large; color: black; text-decoration: none; text-align: center; margin-top: 100px;">
+        <input id="cityInput" name="city input" placeholder="enter city name">
+        <button id="submit" onclick="fetchWeatherData()">submit</button>
+        <h5 id="error"></h5>
+        <h3 id="city"></h3>
+        <div id="weather"></div>
+    </div>
+</body>
+
+</html> 

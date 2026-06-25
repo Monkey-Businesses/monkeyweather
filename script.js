@@ -1,4 +1,6 @@
-const apiKey = '8584f75553ee5fbf67c83208c37ab4c2';
+requestAnimationFrame('dotenv').config();
+
+const apiKey = process.env.APIKEY;
 const units = 'imperial';
 const cnt = 5;
 

@@ -1,6 +1,5 @@
 const apiKey = '8584f75553ee5fbf67c83208c37ab4c2';
-const units = 'imperial'; // or 'imperial'
-const cnt = 5; // number of forecast entries
+const units = 'imperial'; // or 'metric'
 
 async function fetchWeatherData() {
     const response = await fetch('http://ip-api.com/json');

@@ -5,6 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
 <head>
+    <title>Monkey Weather</title>
     <a href="/index.html" style="font-family: 'Lexend'; font-weight: 500; font-size: xx-large; color: black; text-decoration: none;">Monkey Weather</a>
 </head>
 <body>
@@ -12,8 +13,11 @@
     <div style="font-family: 'Lexend'; font-weight: 500; font-size: large; color: black; text-decoration: none; text-align: center; margin-top: 20px;">
         <p>monkey weather! a simple weather app/website to view weather details (WIP)</p>
     </div>
+    <div style="text-align: center;"><button id="submit" onclick="fetchWeatherData()">use ip location for weather based on your computer (use input entry if not accurate)</button></div>
     <div style="font-family: 'Lexend'; font-weight: 500; font-size: large; color: black; text-decoration: none; text-align: center; margin-top: 100px;">
-        <input id="cityInput" name="city input" placeholder="enter city name">
+        <input id="cityInput" name="city input" placeholder="city">
+        <input id="stateInput" name="state input" placeholder="state (eg. maryland = MD)">
+        <input id="countryInput" name="country input" placeholder="country (abbriviate default US)">
         <button id="submit" onclick="fetchWeatherData()">submit</button>
         <h5 id="error"></h5>
         <h3 id="city"></h3>

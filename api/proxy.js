@@ -1,9 +1,10 @@
 const cors = require('cors');
 
 const corsMiddleware = cors({
-  // Allows requests from your local machine and your live GitHub Pages site
-  origin: [/localhost/, /\.github\.io$/] 
+  // Adds your custom ddns domain to the allowed list alongside local testing and github pages
+  origin: [/localhost/, /\.github\.io$/, 'https://monkeybusiness.ddns.net'] 
 });
+
 
 module.exports = async (req, res) => {
   return new Promise((resolve, reject) => {

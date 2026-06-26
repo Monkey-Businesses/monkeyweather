@@ -1,5 +1,5 @@
 // Change this to your live Vercel URL once you deploy!
-const PROXY_URL = 'monkeyweather-sigma.vercel.app/api/proxy'; 
+const PROXY_URL = 'https://monkeyweather-sigma.vercel.app/api/proxy'; 
 
 async function fetchWeatherData() {
     let city = document.getElementById('cityInput').value.trim();

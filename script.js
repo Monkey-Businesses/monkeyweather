@@ -6,6 +6,8 @@ async function fetchWeatherData() {
     let state = document.getElementById('stateInput').value.trim();
     let country = document.getElementById('countryInput').value.trim();
 
+    document.getElementById('error').innerText = 'loading...';
+
     try {
         let responseweather;
 

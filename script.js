@@ -1,58 +1,38 @@
-requestAnimationFrame('dotenv').config();
-
-const apiKey = process.env.APIKEY;
-const units = 'imperial';
-const cnt = 5;
+// Change this to your live Vercel URL once you deploy!
+const PROXY_URL = 'https://monkeyweather-b13rspmyc-shashwats-projects-5760ae3e.vercel.app'; 
 
 async function fetchWeatherData() {
-
     let city = document.getElementById('cityInput').value.trim();
     let state = document.getElementById('stateInput').value.trim();
     let country = document.getElementById('countryInput').value.trim();
 
     try {
-
         let responseweather;
 
         if (city || state || country) {
-
             responseweather = await fetch(
-                `https://api.openweathermap.org/data/2.5/forecast?q=${city},${state},${country}&appid=${apiKey}&units=${units}&cnt=${cnt}`
+                `${PROXY_URL}?city=${city}&state=${state}&country=${country}`
             );
-
-        } 
-        else {
-
+        } else {
             responseweather = await new Promise((resolve, reject) => {
-
                 navigator.geolocation.getCurrentPosition(async (position) => {
-
                     const lat = position.coords.latitude;
                     const lon = position.coords.longitude;
 
-                    const res = await fetch(
-                        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}&cnt=${cnt}`
-                    );
-
+                    const res = await fetch(`${PROXY_URL}?lat=${lat}&lon=${lon}`);
                     resolve(res);
-
                 }, reject);
-
             });
-
         }
 
         if (!responseweather.ok) {
             console.error('API error', responseweather.status);
-
             document.getElementById('error').innerText =
                 'error: data field is incorrect. please recheck your city';
-
             return;
         }
 
         document.getElementById('error').innerText = '';
-
         const data = await responseweather.json();
 
         const temp = Math.floor(data.list[0].main.temp);

@@ -38,6 +38,6 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
-      - name: Deploy to GitHub Pages
+      - name: Deploy GitHub Pages site
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v3.0.2-node.24

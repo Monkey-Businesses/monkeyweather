@@ -16,8 +16,7 @@ permissions:
   id-token: write
 
 env:
- ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable
-
+ ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 
